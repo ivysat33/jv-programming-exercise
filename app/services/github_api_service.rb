@@ -1,5 +1,7 @@
 class GithubApiService
-    GITHUB_API_URL = 'https://api.github.com'
+  GITHUB_API_URL = 'https://api.github.com'
+
+  EVENT_COUNT = 3
 
   def initialize(token = nil)
     @token = token
@@ -7,7 +9,11 @@ class GithubApiService
 
   # Fetch user info from GitHub
   def user_events(username)
-    get("/users/#{username}/events")
+    response = get("/users/#{username}/events")
+
+    response.group_by { |event| event['type'] }
+      .sort_by { |_type, events| -events.size }
+      .first(EVENT_COUNT).keys
   end
 
   # List repositories for a user
