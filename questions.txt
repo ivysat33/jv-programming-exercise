@@ -10,3 +10,7 @@ If yes:
 4. Should this be a single call or a recurring job for certain users?
 
 5. What should logging/ alerts look like? 
+
+6. Do we want the top level event type or more specific? Should the event name be transformed? 
+
+7. Will it always be the top 3 events? 
