@@ -1,0 +1,12 @@
+1. How do we want to return this data (ie formatting)
+
+2. Do we want to store this data? 
+If yes: 
+- do we want to overwrite or do we want to maintain data for each call?
+- Which fields do we want to keep? 
+
+3. Is this expected to be a standalone project or a plugin?
+
+4. Should this be a single call or a recurring job for certain users?
+
+5. What should logging/ alerts look like? 
